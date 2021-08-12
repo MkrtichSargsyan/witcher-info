@@ -67,27 +67,39 @@ body {
 .sunset {
   transform: skewX(20deg);
   background-size: cover;
-  background: url('../c1.jpg') no-repeat right;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('../c1.jpg') no-repeat right;
   background-position: center;
   margin-left: 40px;
   pointer-events: auto;
   overflow: hidden;
-  opacity: 40%;
 }
 
 .sunrise {
   width: 100%;
-  background: url('../creatures_cover.jpg') left no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('../creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   background-size: cover;
-  opacity: 40%;
 }
 
 .slider:hover {
   width: 70%;
+  opacity: 1;
+}
+
+.slider:hover .sunset {
+  background: url('../c1.jpg') no-repeat right;
+  background-position: center;
 }
 
 .sunrise:hover + .slider {
   width: 55%;
+}
+
+.sunrise:hover {
+  background: url('../creatures_cover.jpg') left no-repeat;
+  background-position: center;
+  background-size: cover;
 }
