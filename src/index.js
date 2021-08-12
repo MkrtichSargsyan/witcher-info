@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './custom.css';
 import App from './App';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import store from './store/configureStore';
 
 const Root = () => {
   return (
-    // <Provider store={store}>
-    //   <PersistGate loading={null} persistor={persistor}>
-    //     <BrowserRouter>
-    <App />
-    //     </BrowserRouter>
-    //   </PersistGate>
-    // </Provider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   );
 };
 
