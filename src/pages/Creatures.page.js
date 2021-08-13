@@ -4,11 +4,6 @@ import Slider from '../components/Slider';
 
 export default function CreaturesPage() {
   const creatures = useSelector((state) => state.creaturesReducer.creatures);
-  console.log(creatures);
 
-  return (
-    <div>
-      <Slider />
-    </div>
-  );
+  return <Slider slides={creatures} />;
 }

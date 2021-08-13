@@ -120,28 +120,13 @@ body {
   opacity: 1;
 }
 
-/* Navigation */
+/* Carousel */
 
-.carousel_dots {
-  display: inline-block;
-  left: 50%;
-  margin-top: 2rem;
-  position: absolute;
-  transform: translateX(-50%);
+.carousel_container {
+  height: 400px;
 }
 
-.carousel_dots .dot {
-  background: #ccc;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 2rem;
-  margin: 0 0.3rem;
-  outline: none;
-  transform: scale(0.5);
-  width: 2rem;
-}
-
-.carousel_dots .dot:active {
-  background: black;
+.slider-right div,
+.slider-left div {
+  border: none !important;
 }

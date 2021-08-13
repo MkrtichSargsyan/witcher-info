@@ -15,7 +15,6 @@ export const fetchCreatures = (url) => async (dispatch) => {
       .get(url)
       .then((el) => el.data)
       .then((data) => getRandomItems(data, 7));
-    console.log(creatures);
   } catch (error) {
     throw new Error(error);
   }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import LoadingPage from './pages/Loading.page';
 import MainPage from './pages/Main.page';
 import { fetchCreatures } from './store/actions';
@@ -9,21 +9,21 @@ import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  let [completed, setCompleted] = useState(60);
+  // const [loading, setLoading] = useState(false);
+  let [completed] = useState(60);
   const creatures_url = 'creatures';
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
 
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 3000);
 
     dispatch(fetchCreatures(BASE_URL + creatures_url));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
