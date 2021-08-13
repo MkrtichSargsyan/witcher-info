@@ -18,12 +18,11 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
-  background-image: url('../bg.jpg');
+  background-image: url('../images/bg.jpg');
 }
 
 .creatures_cover,
 .characters_cover {
-  /* transform: skew(20deg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -31,13 +30,13 @@ body {
 }
 
 .creatures_cover {
-  background-image: url('../creatures_cover.jpg');
+  background-image: url('../images/creatures_cover.jpg');
   transform: skewX(-20deg);
   transition: width 1.2s ease-in-out;
 }
 
 .characters_cover {
-  background-image: url('../characters_cover.jpg');
+  background-image: url('../images/characters_cover.jpg');
   margin-left: 76px;
   transform: skewX(20deg);
 }
@@ -68,7 +67,7 @@ body {
   transform: skewX(20deg);
   background-size: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('../c1.jpg') no-repeat right;
+    url('../images/characters_cover.jpg') no-repeat right;
   background-position: center;
   margin-left: 40px;
   pointer-events: auto;
@@ -78,7 +77,7 @@ body {
 .sunrise {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('../creatures_cover.jpg') left no-repeat;
+    url('../images/creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   background-size: cover;
@@ -90,7 +89,7 @@ body {
 }
 
 .slider:hover .sunset {
-  background: url('../c1.jpg') no-repeat right;
+  background: url('../images/characters_cover.jpg') no-repeat right;
   opacity: 0.8;
   background-position: center;
 }
@@ -100,7 +99,7 @@ body {
 }
 
 .sunrise:hover {
-  background: url('../creatures_cover.jpg') left no-repeat;
+  background: url('../images/creatures_cover.jpg') left no-repeat;
   opacity: 0.8;
   background-position: center;
   background-size: cover;
@@ -110,11 +109,6 @@ body {
   font-family: 'Courgette', cursive;
   width: min-content;
 }
-
-/* .characters_title,
-.creatures_title {
-  opacity: 0;
-} */
 
 .sunset:hover .characters_title {
   transition: all 1.5s linear;
