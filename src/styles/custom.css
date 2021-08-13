@@ -91,6 +91,7 @@ body {
 
 .slider:hover .sunset {
   background: url('../c1.jpg') no-repeat right;
+  opacity: 0.8;
   background-position: center;
 }
 
@@ -100,6 +101,27 @@ body {
 
 .sunrise:hover {
   background: url('../creatures_cover.jpg') left no-repeat;
+  opacity: 0.8;
   background-position: center;
   background-size: cover;
+}
+
+.font_courgette {
+  font-family: 'Courgette', cursive;
+  width: min-content;
+}
+
+/* .characters_title,
+.creatures_title {
+  opacity: 0;
+} */
+
+.sunset:hover .characters_title {
+  transition: all 1.5s linear;
+  opacity: 1;
+}
+
+.sunrise:hover .creatures_title {
+  transition: all 1.5s linear;
+  opacity: 1;
 }
