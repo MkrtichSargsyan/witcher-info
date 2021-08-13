@@ -119,3 +119,29 @@ body {
   transition: all 1.5s linear;
   opacity: 1;
 }
+
+/* Navigation */
+
+.carousel_dots {
+  display: inline-block;
+  left: 50%;
+  margin-top: 2rem;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.carousel_dots .dot {
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+  margin: 0 0.3rem;
+  outline: none;
+  transform: scale(0.5);
+  width: 2rem;
+}
+
+.carousel_dots .dot:active {
+  background: black;
+}

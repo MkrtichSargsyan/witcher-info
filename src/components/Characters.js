@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Slider from './Slider';
 
 export default function Characters() {
   return (
     <div>
-      Characters
+      <Slider />
     </div>
-  )
+  );
 }
