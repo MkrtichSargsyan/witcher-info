@@ -2,28 +2,26 @@
 import { Carousel } from '3d-react-carousal';
 
 export default function Slider({ slides }) {
-  let slidess = [
-    <img src="https://picsum.photos/800/300/?random" alt="1" />,
-    <img src="https://picsum.photos/800/301/?random" alt="2" />,
-    <img src="https://picsum.photos/800/302/?random" alt="3" />,
-    <img src="https://picsum.photos/800/303/?random" alt="4" />,
-    <img src="https://picsum.photos/800/304/?random" alt="5" />,
-  ];
-  console.log(slidess);
+  console.log(slides);
+
   const slidesArr =
-    slides.length && slides.map((el) => <img src={el.image} alt={el.id} />);
-  // console.log(slidesArr);
+    slides.length &&
+    slides.map((el) => (
+      <div className="card bg-gray-900 flex flex-col items-center">
+        <h2 className="text-2xl font_courgette">{el.name}</h2>
+        <img
+          className="object-contain w-full h-full"
+          src={el.image}
+          alt={el.id}
+        />
+      </div>
+    ));
 
   return (
-    <div className="bg-gray-800 h-screen relative">
-      {/* <div className="carousel_container border w-2/5 absolute right-0 bottom-64 h-36 flex">
-      {slides.length &&
-        slidesArr.map((el) => (
-          
-          ))}
-      </div> */}
-
-      <Carousel slides={slidesArr} autoplay={false} interval={1000} />
+    <div className="loadingPage h-screen relative">
+      <div className="carousel_container">
+        <Carousel slides={slidesArr} autoplay={false} interval={1000} />
+      </div>
     </div>
   );
 }
