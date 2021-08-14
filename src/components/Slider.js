@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 import { Carousel } from '3d-react-carousal';
+import my_dream_forest from '../images/my_dream_forest.jpg';
 
 export default function Slider({ slides }) {
   console.log(slides);
@@ -17,8 +18,12 @@ export default function Slider({ slides }) {
       </div>
     ));
 
+  let sectionStyle = {
+    backgroundImage: `url(${my_dream_forest})`,
+  };
+
   return (
-    <div className="h-screen overflow-hidden">
+    <div style={sectionStyle} className="h-screen overflow-hidden">
       {slidesArr.length && (
         <div className="carousel_container">
           <Carousel slides={slidesArr} autoplay={false} interval={1000} />

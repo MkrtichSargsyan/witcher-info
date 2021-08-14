@@ -53,7 +53,7 @@ body {
 
 /* slider */
 
-.slider-container {
+.main-slider-container {
   position: relative;
   height: 100vh;
 }
@@ -131,7 +131,6 @@ body {
   position: absolute;
   right: 0;
   bottom: 15%;
-  /* width: 100%; */
   width: 1300px;
   overflow: hidden;
 }
@@ -162,4 +161,14 @@ body {
 .react-3d-carousel .slider-container .slider-right {
   left: 0% !important;
   height: 100% !important;
+}
+
+.aa {
+  background: url('../images/characters_cover.jpg') no-repeat right;
+  opacity: 0.8;
+  background-position: center;
+}
+
+.slider-single-content{
+  box-shadow: none !important;
 }
