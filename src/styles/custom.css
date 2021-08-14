@@ -143,6 +143,16 @@ body {
 .slider-right div,
 .slider-left div {
   border: none !important;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(126, 126, 126);
+}
+
+.slider-right div i,
+.slider-left div i{
+  color: black;
 }
 
 .react-3d-carousel .slider-container .slider-left {
@@ -150,25 +160,22 @@ body {
 }
 
 .react-3d-carousel .slider-container .slider-right {
-  margin-left: 20px !important;
+  margin-left: 25px !important;
+  left: 0% !important;
+  height: 100% !important;
 }
 
 .card {
   height: 300px;
   width: 200px;
+  background-color: #000000e3;
+  border-radius: 10px;
 }
 
-.react-3d-carousel .slider-container .slider-right {
-  left: 0% !important;
-  height: 100% !important;
+.card img {
+  filter: brightness(200%);
 }
 
-.aa {
-  background: url('../images/characters_cover.jpg') no-repeat right;
-  opacity: 0.8;
-  background-position: center;
-}
-
-.slider-single-content{
+.slider-single-content {
   box-shadow: none !important;
 }

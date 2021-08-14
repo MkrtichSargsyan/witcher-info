@@ -8,8 +8,8 @@ export default function Slider({ slides }) {
   const slidesArr =
     slides.length &&
     slides.map((el) => (
-      <div className="card bg-gray-900 flex flex-col items-center relative">
-        <h2 className="text-2xl font_courgette">{el.class}</h2>
+      <div className="card flex flex-col items-center relative">
+        <h2 className="text-2xl text-white mt-3 font_courgette">{el.class}</h2>
         <img
           className="object-contain w-full h-full"
           src={el.image}
