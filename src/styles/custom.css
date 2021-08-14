@@ -129,9 +129,16 @@ body {
 
 .carousel_container {
   position: absolute;
-  right: -20%;
-  bottom: 20%;
-  width: 100%;
+  right: 0;
+  bottom: 15%;
+  /* width: 100%; */
+  width: 1300px;
+  overflow: hidden;
+}
+
+.slider-container {
+  left: 72% !important;
+  height: 300px;
 }
 
 .slider-right div,
