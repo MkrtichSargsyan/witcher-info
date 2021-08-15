@@ -19,6 +19,18 @@ body {
   width: min-content;
 }
 
+/* logo */
+
+.logo {
+  transition: all 0.5s ease-in-out;
+}
+
+.logo:hover {
+  animation: none;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 /* loading */
 
 .loadingPage {
@@ -151,7 +163,7 @@ body {
 }
 
 .slider-right div i,
-.slider-left div i{
+.slider-left div i {
   color: black;
 }
 
@@ -178,4 +190,21 @@ body {
 
 .slider-single-content {
   box-shadow: none !important;
+}
+
+/* rotating */
+
+.circle {
+  -webkit-animation: rotateY 1s infinite linear;
+  animation: rotateY 3s infinite linear;
+}
+@-webkit-keyframes rotateY {
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@keyframes rotateY {
+  to {
+    transform: rotateY(360deg);
+  }
 }

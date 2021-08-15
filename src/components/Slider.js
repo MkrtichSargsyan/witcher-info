@@ -10,6 +10,15 @@ export default function Slider({ slides, bg }) {
     console.log(choosedItem);
   };
 
+  // get unique classes for the slider
+  const classes = slides
+    .map((el) => el.class)
+    .reduce(
+      (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
+      []
+    );
+
+
   const slidesArr =
     slides.length &&
     slides.map((el) => {
@@ -40,9 +49,6 @@ export default function Slider({ slides, bg }) {
       style={sectionStyle}
       className="h-screen min-h-screen overflow-hidden relative"
     >
-      <div className='bg-red-800'>
-        <input type="text" />
-      </div>
       <div className="w-max text-6xl ml-20 absolute bottom-1/3 text-white font_courgette">
         {/* {title} */}
         sdfsdfs
