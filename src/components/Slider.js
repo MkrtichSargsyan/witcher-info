@@ -1,28 +1,52 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Carousel } from '3d-react-carousal';
 
 export default function Slider({ slides, bg }) {
-  console.log(slides);
+  const [title, setTitle] = useState('');
+  let [choosedItem, setChoosedItem] = useState('');
+
+  choosedItem = (el) => {
+    setChoosedItem(el);
+    console.log(choosedItem);
+  };
 
   const slidesArr =
     slides.length &&
-    slides.map((el) => (
-      <div className="card flex flex-col items-center relative">
-        <h2 className="text-2xl text-white mt-3 font_courgette">{el.class}</h2>
-        <img
-          className="object-contain w-full h-full"
-          src={el.image}
-          alt={el.id}
-        />
-      </div>
-    ));
+    slides.map((el) => {
+      // console.log(el.name);
+      return (
+        <div
+          className="card flex flex-col items-center relative"
+          onClick={(el) => choosedItem(el)}
+        >
+          <h2 className="text-2xl text-white mt-3 font_courgette">
+            {el.class}
+          </h2>
+          <img
+            className="object-contain w-full h-full"
+            src={el.image}
+            alt={el.id}
+          />
+        </div>
+      );
+    });
 
   let sectionStyle = {
     backgroundImage: `url(${bg})`,
   };
 
   return (
-    <div style={sectionStyle} className="h-screen overflow-hidden">
+    <div
+      style={sectionStyle}
+      className="h-screen min-h-screen overflow-hidden relative"
+    >
+      <div className='bg-red-800'>
+        <input type="text" />
+      </div>
+      <div className="w-max text-6xl ml-20 absolute bottom-1/3 text-white font_courgette">
+        {/* {title} */}
+        sdfsdfs
+      </div>
       {slidesArr.length && (
         <div className="carousel_container">
           <Carousel slides={slidesArr} autoplay={false} />

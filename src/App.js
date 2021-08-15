@@ -7,6 +7,7 @@ import { fetchCreatures } from './store/actions';
 import BASE_URL from './api';
 import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
+import Layout from './components/Layout';
 
 function App() {
   // const [loading, setLoading] = useState(false);
@@ -32,8 +33,10 @@ function App() {
       ) : (
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route exact path="/characters" component={CharactersPage} />
-          <Route exact path="/creatures" component={CreaturesPage} />
+          <Layout>
+            <Route exact path="/characters" component={CharactersPage} />
+            <Route exact path="/creatures" component={CreaturesPage} />
+          </Layout>
         </Switch>
       )}
     </>
