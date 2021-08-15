@@ -22,12 +22,17 @@ export const fetchCreatures = (url) => async (dispatch) => {
   return dispatch(fetchCreaturesSuccess(creatures));
 };
 
-export const filter = (payload) => ({
-  type: types.FILTER_CREATURES,
-  payload,
-});
+// export const filter = (payload) => ({
+//   type: types.FILTER_CREATURES,
+//   payload,
+// });
 
 export const showOptions = (payload) => ({
   type: types.SHOW_OPTIONS,
+  payload,
+});
+
+export const selectOption = (payload) => ({
+  type: types.SELECT_OPTION,
   payload,
 });

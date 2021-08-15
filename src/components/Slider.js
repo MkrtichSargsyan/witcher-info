@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from '3d-react-carousal';
-import { useDispatch } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { showOptions } from '../store/actions';
 
 export default function Slider({ slides, bg }) {
+  const selectedOption = useSelector(
+    (state) => state.optionsReducer.selectedOption
+  );
   const dispatch = useDispatch();
 
-  let [choosedItem, setChoosedItem] = useState('');
+  // let [choosedItem, setChoosedItem] = useState('');
 
   // get unique classes for the slider
   let classes = slides
@@ -17,18 +19,25 @@ export default function Slider({ slides, bg }) {
       []
     );
 
+  // filter the slides
+  const filteredSlides =
+    selectedOption === 'All'
+      ? slides
+      : slides.filter((element) => element.class === selectedOption);
+  console.log(filteredSlides);
+
   useEffect(() => {
     dispatch(showOptions(classes));
-  });
+  }, [classes, dispatch]);
 
   const slidesArr =
-    slides.length &&
-    slides.map((el) => {
+    filteredSlides.length &&
+    filteredSlides.map((el) => {
       // console.log(el.name);
       return (
         <div
           className="card flex flex-col items-center relative"
-          onClick={(el) => choosedItem(el)}
+          // onClick={(el) => choosedItem(el)}
         >
           <h2 className="text-2xl text-white mt-3 font_courgette">
             {el.class}

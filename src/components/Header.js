@@ -1,23 +1,30 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import logo from '../images/logo.png';
+import { selectOption } from '../store/actions';
 
 export default function Header() {
   const options = useSelector((state) => state.optionsReducer.options);
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    dispatch(selectOption(e.target.value));
+  };
 
   return (
     <div className="fixed z-10 w-full flex items-center justify-between px-10 py-6">
       <img className="circle w-20 h-20 logo" src={logo} alt="logo" />
       <select
-        className="min-w-min px-4 w-44 bg-gray-600 rounded text-white border-none text-1xl p-1"
+        className="min-w-min px-4 w-44 bg-gray-600 rounded text-white text-1xl"
         name="creatureClasses"
         id="creatureClasses"
+        onChange={handleChange}
       >
         <option className="bg-gray-600 text-white" value="All">
           All
         </option>
         {options.map((op) => (
-          <option key={op} className="bg-gray-600 text-black px-4 py-2" value={op}>
+          <option key={op} className="text-black" value={op}>
             {op}
           </option>
         ))}
