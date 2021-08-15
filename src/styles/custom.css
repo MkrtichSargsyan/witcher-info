@@ -9,7 +9,7 @@ body {
   background-color: black;
   height: 100vh;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
@@ -207,4 +207,15 @@ body {
   to {
     transform: rotateY(360deg);
   }
+}
+
+/* select */
+
+select {
+  padding: 5px;
+  font-size: 25px;
+  font-family: dumbledor;
+  line-height: 1;
+  height: 45px;
+  -webkit-appearance: none;
 }

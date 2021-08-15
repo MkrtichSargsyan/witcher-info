@@ -21,3 +21,13 @@ export const fetchCreatures = (url) => async (dispatch) => {
 
   return dispatch(fetchCreaturesSuccess(creatures));
 };
+
+export const filter = (payload) => ({
+  type: types.FILTER_CREATURES,
+  payload,
+});
+
+export const showOptions = (payload) => ({
+  type: types.SHOW_OPTIONS,
+  payload,
+});
