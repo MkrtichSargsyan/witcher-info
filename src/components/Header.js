@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import { selectOption } from '../store/actions';
 
@@ -13,7 +14,9 @@ export default function Header() {
 
   return (
     <div className="fixed z-10 w-full flex items-center justify-between px-10 py-6">
-      <img className="circle w-20 h-20 logo" src={logo} alt="logo" />
+      <Link to="/">
+        <img className="circle w-20 h-20 logo" src={logo} alt="logo" />
+      </Link>
       <select
         className="min-w-min px-4 w-44 bg-gray-600 rounded text-white text-1xl"
         name="creatureClasses"
@@ -21,7 +24,7 @@ export default function Header() {
         onChange={handleChange}
       >
         <option className="bg-gray-600 text-white" value="All">
-          All
+          {'All'}
         </option>
         {options.map((op) => (
           <option key={op} className="text-black" value={op}>

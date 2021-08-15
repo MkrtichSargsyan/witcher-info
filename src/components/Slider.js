@@ -24,7 +24,6 @@ export default function Slider({ slides, bg }) {
     selectedOption === 'All'
       ? slides
       : slides.filter((element) => element.class === selectedOption);
-  console.log(filteredSlides);
 
   useEffect(() => {
     dispatch(showOptions(classes));
@@ -33,7 +32,6 @@ export default function Slider({ slides, bg }) {
   const slidesArr =
     filteredSlides.length &&
     filteredSlides.map((el) => {
-      // console.log(el.name);
       return (
         <div
           className="card flex flex-col items-center relative"
@@ -62,7 +60,6 @@ export default function Slider({ slides, bg }) {
     >
       <div className="w-max text-6xl ml-20 absolute bottom-1/3 text-white font_courgette">
         {/* {title} */}
-        sdfsdfs
       </div>
       {window.innerWidth > 1100 ? (
         slidesArr.length && (
@@ -76,11 +73,3 @@ export default function Slider({ slides, bg }) {
     </div>
   );
 }
-
-// export default React.memo(Slider, (props, nextProps) => {
-//   console.log(props);
-//   console.log(nextProps);
-//   // if (props.prop1 === nextProps.prop1) {
-//   //   // return true if you don't need re-render
-//   // }
-// });
