@@ -15,7 +15,7 @@ function App() {
   // const [loading, setLoading] = useState(false);
   const [percent, setPercent] = useState(0);
   const creatures_url = 'creatures';
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(3.7);
 
   const dispatch = useDispatch();
 
@@ -24,16 +24,17 @@ function App() {
       count > 0 && setCount((count) => count - 1);
     }, 1000);
 
-    setPercent(100 - (100 * count) / 5);
+    setPercent(Math.round(100 - (100 * count) / 3.7)); //counting the percentage for 5 seconds
 
     dispatch(fetchCreatures(BASE_URL + creatures_url));
 
     return () => clearInterval(interval);
   }, [count, dispatch]);
 
+  console.log(count);
   return (
     <>
-      {false ? (
+      {percent < 100 ? (
         <LoadingPage completed={percent} />
       ) : (
         <Switch>

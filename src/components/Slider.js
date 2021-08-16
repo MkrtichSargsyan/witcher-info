@@ -37,7 +37,7 @@ export default function Slider({ slides, bg }) {
   };
 
   const slidesArr =
-    filteredSlides.length &&
+    filteredSlides.length > 0 &&
     filteredSlides.map((el) => {
       return (
         <div

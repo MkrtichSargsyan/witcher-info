@@ -2,15 +2,15 @@ import React from 'react';
 import ProgressBar from '@ramonak/react-progress-bar';
 
 export default function LoadingPage({ completed }) {
-  console.log(completed);
   return (
     <div className="loadingPage flex justify-center items-center">
       <div className="w-2/6">
-        <h2>Please wait ...</h2>
+        <h2 className='mb-2 text-white text-xl'>Please wait ...</h2>
         <ProgressBar
           completed={completed}
-          baseBgColor={'rgb(148 148 136)'}
+          baseBgColor={'rgb(62 69 84)'}
           bgColor={'#020101'}
+          height={'35px'}
         />
       </div>
     </div>
