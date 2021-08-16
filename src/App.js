@@ -9,28 +9,32 @@ import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
 import Layout from './components/Layout';
 import DetailPage from './pages/Detail.page';
+import Test from './pages/test';
 
 function App() {
   // const [loading, setLoading] = useState(false);
-  let [completed] = useState(60);
+  const [percent, setPercent] = useState(0);
   const creatures_url = 'creatures';
+  const [count, setCount] = useState(5);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // setLoading(true);
+    const interval = setTimeout(() => {
+      count > 0 && setCount((count) => count - 1);
+    }, 1000);
 
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 3000);
+    setPercent(100 - (100 * count) / 5);
 
     dispatch(fetchCreatures(BASE_URL + creatures_url));
-  }, [dispatch]);
+
+    return () => clearInterval(interval);
+  }, [count, dispatch]);
 
   return (
     <>
       {false ? (
-        <LoadingPage completed={completed} />
+        <LoadingPage completed={percent} />
       ) : (
         <Switch>
           <Route exact path="/" component={MainPage} />
@@ -39,6 +43,7 @@ function App() {
             <Route exact path="/creatures" component={CreaturesPage} />
             <Route exact path="/creatures/:id" component={DetailPage} />
             <Route exact path="/characters/:id" component={DetailPage} />
+            {/* <Route exact path="/test" component={Test} /> */}
           </Layout>
         </Switch>
       )}

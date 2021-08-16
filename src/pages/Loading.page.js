@@ -2,6 +2,7 @@ import React from 'react';
 import ProgressBar from '@ramonak/react-progress-bar';
 
 export default function LoadingPage({ completed }) {
+  console.log(completed);
   return (
     <div className="loadingPage flex justify-center items-center">
       <div className="w-2/6">
