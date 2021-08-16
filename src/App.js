@@ -8,6 +8,7 @@ import BASE_URL from './api';
 import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
 import Layout from './components/Layout';
+import DetailPage from './pages/Detail.page';
 
 function App() {
   // const [loading, setLoading] = useState(false);
@@ -36,6 +37,8 @@ function App() {
           <Layout>
             <Route exact path="/characters" component={CharactersPage} />
             <Route exact path="/creatures" component={CreaturesPage} />
+            <Route exact path="/creatures/:id" component={DetailPage} />
+            <Route exact path="/characters/:id" component={DetailPage} />
           </Layout>
         </Switch>
       )}

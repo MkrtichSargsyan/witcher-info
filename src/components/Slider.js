@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from '3d-react-carousal';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { showOptions } from '../store/actions';
 
 export default function Slider({ slides, bg }) {
@@ -8,8 +9,7 @@ export default function Slider({ slides, bg }) {
     (state) => state.optionsReducer.selectedOption
   );
   const dispatch = useDispatch();
-
-  // let [choosedItem, setChoosedItem] = useState('');
+  let history = useHistory();
 
   // get unique classes for the slider
   let classes = slides
@@ -27,15 +27,23 @@ export default function Slider({ slides, bg }) {
 
   useEffect(() => {
     dispatch(showOptions(classes));
+
+    // console.log(document.getElementsByClassName('active')[0]);
   }, [classes, dispatch]);
+
+  const showDetails = (el) => {
+    const path = `${history.location.pathname}/${el.id}`;
+    history.push(path);
+  };
 
   const slidesArr =
     filteredSlides.length &&
     filteredSlides.map((el) => {
       return (
         <div
+          id={el.id}
           className="card flex flex-col items-center relative"
-          // onClick={(el) => choosedItem(el)}
+          onClick={() => showDetails(el)}
         >
           <h2 className="text-2xl text-white mt-3 font_courgette">
             {el.class}
