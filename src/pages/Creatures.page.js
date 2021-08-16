@@ -9,5 +9,14 @@ export default function CreaturesPage() {
   dispatch(selectOption('All'));
 
   const creatures = useSelector((state) => state.creaturesReducer.creatures);
-  return <Slider slides={creatures} bg={my_dream_forest} />;
+  return (
+    <Slider
+      slides={creatures}
+      bg={my_dream_forest}
+      title={{
+        quote: `Evil Is Evil. Lesser, Greater, Middling, Makes No Difference. If I'm To Choose Between One Evil And Another, I'd Rather Not Choose At All`,
+        author: 'Geralt of Rivia',
+      }}
+    />
+  );
 }

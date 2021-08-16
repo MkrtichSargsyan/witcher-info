@@ -9,7 +9,6 @@ import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
 import Layout from './components/Layout';
 import DetailPage from './pages/Detail.page';
-import Test from './pages/test';
 
 function App() {
   // const [loading, setLoading] = useState(false);
@@ -31,10 +30,10 @@ function App() {
     return () => clearInterval(interval);
   }, [count, dispatch]);
 
-  console.log(count);
   return (
     <>
-      {percent < 100 ? (
+      {false ? (
+        // {percent < 100 ? (
         <LoadingPage completed={percent} />
       ) : (
         <Switch>
@@ -44,7 +43,6 @@ function App() {
             <Route exact path="/creatures" component={CreaturesPage} />
             <Route exact path="/creatures/:id" component={DetailPage} />
             <Route exact path="/characters/:id" component={DetailPage} />
-            {/* <Route exact path="/test" component={Test} /> */}
           </Layout>
         </Switch>
       )}
