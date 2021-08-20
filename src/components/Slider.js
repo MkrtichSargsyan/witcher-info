@@ -27,8 +27,6 @@ export default function Slider({ slides, bg, title }) {
 
   useEffect(() => {
     dispatch(showOptions(classes));
-
-    // console.log(document.getElementsByClassName('active')[0]);
   }, [classes, dispatch]);
 
   const showDetails = (el) => {
@@ -71,7 +69,9 @@ export default function Slider({ slides, bg, title }) {
           <div className="text-3xl p-4 text-white text-left leading-tight h-3">
             “
           </div>
-          <p className="text-1xl text-gray-600 text-center px-5">{title.quote}</p>
+          <p className="text-1xl text-gray-600 text-center px-5">
+            {title.quote}
+          </p>
           <div className="text-3xl text-white text-right leading-tight h-3 -mt-3 p-4">
             ”
           </div>

@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <div className="fixed z-10 w-full flex items-center justify-between px-10 py-6">
+    <div className="z-10 fixed w-full flex items-center justify-between px-10 py-6">
       <Link to="/">
         <img className="circle w-20 h-20 logo" src={logo} alt="logo" />
       </Link>

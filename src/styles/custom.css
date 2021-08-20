@@ -11,12 +11,21 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
 /* font */
+.courgette {
+  font-family: 'Courgette', cursive;
+}
+
 .font_courgette {
   font-family: 'Courgette', cursive;
   width: min-content;
+}
+
+.font_indie {
+  font-family: 'Indie Flower', cursive;
 }
 
 /* logo */
@@ -232,4 +241,8 @@ select {
   line-height: 1;
   height: 45px;
   -webkit-appearance: none;
+}
+
+.description_shadow{
+  box-shadow: 18px -2px 30px -8px #1a1a1b;
 }

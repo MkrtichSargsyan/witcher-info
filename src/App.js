@@ -38,11 +38,11 @@ function App() {
       ) : (
         <Switch>
           <Route exact path="/" component={MainPage} />
+          <Route exact path="/creatures/:id" component={DetailPage} />
+          <Route exact path="/characters/:id" component={DetailPage} />
           <Layout>
             <Route exact path="/characters" component={CharactersPage} />
             <Route exact path="/creatures" component={CreaturesPage} />
-            <Route exact path="/creatures/:id" component={DetailPage} />
-            <Route exact path="/characters/:id" component={DetailPage} />
           </Layout>
         </Switch>
       )}
