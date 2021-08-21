@@ -1,4 +1,5 @@
 export function getRandomItems(arr, n) {
+  arr = arr.filter((el) => el.profession !== 'Unknown');
   let result = new Array(n),
     len = arr.length,
     taken = new Array(len);

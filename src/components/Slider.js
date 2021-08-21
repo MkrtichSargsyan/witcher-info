@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { showOptions } from '../store/actions';
 
-export default function Slider({ slides, bg, title }) {
+export default function Slider({ slides, bg, title, itemsType }) {
   const selectedOption = useSelector(
     (state) => state.optionsReducer.selectedOption
   );
@@ -13,17 +13,34 @@ export default function Slider({ slides, bg, title }) {
 
   // get unique classes for the slider
   let classes = slides
-    .map((el) => el.class)
+    .map((el) => (itemsType === 'characters' ? el.profession : el.class))
     .reduce(
       (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
       []
     );
 
   // filter the slides
-  const filteredSlides =
-    selectedOption === 'All'
-      ? slides
-      : slides.filter((element) => element.class === selectedOption);
+
+  let filteredSlides = [];
+
+  switch (itemsType) {
+    case 'characters':
+      filteredSlides =
+        selectedOption === 'All'
+          ? slides
+          : slides.filter((element) => element.profession === selectedOption);
+      break;
+
+    case 'creatures':
+      filteredSlides =
+        selectedOption === 'All'
+          ? slides
+          : slides.filter((element) => element.class === selectedOption);
+      break;
+
+    default:
+      break;
+  }
 
   useEffect(() => {
     dispatch(showOptions(classes));
@@ -39,12 +56,13 @@ export default function Slider({ slides, bg, title }) {
     filteredSlides.map((el) => {
       return (
         <div
+          key={el.id}
           id={el.id}
           className="card flex flex-col items-center relative"
           onClick={() => showDetails(el)}
         >
           <h2 className="text-2xl text-white mt-3 font_courgette">
-            {el.class}
+            {itemsType === 'characters' ? el.profession : el.class}
           </h2>
           <img
             className="object-contain w-full h-full"

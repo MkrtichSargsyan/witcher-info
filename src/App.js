@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoadingPage from './pages/Loading.page';
 import MainPage from './pages/Main.page';
-import { fetchCreatures } from './store/actions';
+import { fetchCreatures, fetchCharacters } from './store/actions';
 import BASE_URL from './api';
 import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
@@ -11,9 +11,9 @@ import Layout from './components/Layout';
 import DetailPage from './pages/Detail.page';
 
 function App() {
-  // const [loading, setLoading] = useState(false);
   const [percent, setPercent] = useState(0);
   const creatures_url = 'creatures';
+  const characters_url = 'characters';
   const [count, setCount] = useState(3.7);
 
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ function App() {
     setPercent(Math.round(100 - (100 * count) / 3.7)); //counting the percentage for 5 seconds
 
     dispatch(fetchCreatures(BASE_URL + creatures_url));
+    dispatch(fetchCharacters(BASE_URL + characters_url));
 
     return () => clearInterval(interval);
   }, [count, dispatch]);

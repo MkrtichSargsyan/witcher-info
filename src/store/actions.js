@@ -7,6 +7,11 @@ const fetchCreaturesSuccess = (payload) => ({
   payload,
 });
 
+const fetchCharactersSuccess = (payload) => ({
+  type: types.FETCH_CHARACTERS,
+  payload,
+});
+
 export const fetchCreatures = (url) => async (dispatch) => {
   let creatures = [];
 
@@ -18,8 +23,23 @@ export const fetchCreatures = (url) => async (dispatch) => {
   } catch (error) {
     throw new Error(error);
   }
-
   return dispatch(fetchCreaturesSuccess(creatures));
+};
+
+// fetchCharacters
+
+export const fetchCharacters = (url) => async (dispatch) => {
+  let characters = [];
+
+  try {
+    characters = await axios
+      .get(url)
+      .then((el) => el.data)
+      .then((data) => getRandomItems(data, 12));
+  } catch (error) {
+    throw new Error(error);
+  }
+  return dispatch(fetchCharactersSuccess(characters));
 };
 
 export const showOptions = (payload) => ({

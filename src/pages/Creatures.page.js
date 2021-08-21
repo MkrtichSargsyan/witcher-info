@@ -11,6 +11,7 @@ export default function CreaturesPage() {
   const creatures = useSelector((state) => state.creaturesReducer.creatures);
   return (
     <Slider
+      itemsType='creatures'
       slides={creatures}
       bg={my_dream_forest}
       title={{

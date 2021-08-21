@@ -62,7 +62,9 @@ export default function DetailPage({ location }) {
             <span className="font-extrabold text-gray-300 text-2xl mr-4">
               Tactics:
             </span>
-            <h3 className="font_indie">{tactics}</h3>
+            <h3 className="font_indie">
+              {tactics && tactics.substring(0, 300) + '...'}
+            </h3>
           </div>
         </aside>
       </section>
