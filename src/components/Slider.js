@@ -48,7 +48,7 @@ export default function Slider({ slides, bg, title, itemsType }) {
 
   const showDetails = (el) => {
     const path = `${history.location.pathname}/${el.id}`;
-    history.push(path);
+    history.push(path, { itemsType });
   };
 
   const slidesArr =
