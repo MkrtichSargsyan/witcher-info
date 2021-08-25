@@ -19,7 +19,7 @@ export const fetchCreatures = (url) => async (dispatch) => {
     creatures = await axios
       .get(url)
       .then((el) => el.data)
-      .then((data) => getRandomItems(data, 12));
+      .then((data) => getRandomItems(data, 20));
   } catch (error) {
     throw new Error(error);
   }
