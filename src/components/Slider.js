@@ -114,7 +114,7 @@ export default function Slider({
          flex flex-wrap justify-around
          gap-4 overflow-y-scroll transform scale-100"
         >
-          {slides.map((slide) => (
+          {filteredSlides.map((slide) => (
             <div
               key={slide.id}
               role="button"
@@ -124,7 +124,7 @@ export default function Slider({
               onKeyDown={() => showDetails(slide)}
             >
               <img
-                claclassNamess="w-64 object-cover rounded-t-md"
+                className="w-64 object-cover rounded-t-md"
                 src={slide.image}
                 alt=""
               />
@@ -144,6 +144,6 @@ export default function Slider({
 Slider.propTypes = {
   slides: PropTypes.instanceOf(Array).isRequired,
   bg: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.instanceOf(Object).isRequired,
   itemsType: PropTypes.string.isRequired,
 };

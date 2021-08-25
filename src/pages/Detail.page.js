@@ -75,5 +75,5 @@ export default function DetailPage({ location }) {
 }
 
 DetailPage.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.instanceOf(Object).isRequired,
 };

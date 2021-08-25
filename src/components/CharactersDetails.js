@@ -38,5 +38,5 @@ export default function CharactersDetails({ details }) {
 }
 
 CharactersDetails.propTypes = {
-  details: PropTypes.instanceOf(Object).isRequired,
+  details: PropTypes.string.isRequired,
 };
