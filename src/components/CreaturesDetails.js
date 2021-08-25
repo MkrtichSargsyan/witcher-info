@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function CreaturesDetails({details}) {
-  const { class: type, name, quest, susceptibility, tactics } = details;
+export default function CreaturesDetails({ details }) {
+  const {
+    class: type, name, quest, susceptibility, tactics,
+  } = details;
 
   return (
     <aside className="flex-1 px-10 description_shadow">
@@ -29,9 +32,13 @@ export default function CreaturesDetails({details}) {
           Tactics:
         </span>
         <h3 className="font_indie">
-          {tactics && tactics.substring(0, 300) + '...'}
+          {tactics && `${tactics.substring(0, 300)}...`}
         </h3>
       </div>
     </aside>
   );
 }
+
+CreaturesDetails.propTypes = {
+  details: PropTypes.instanceOf(Object).isRequired,
+};

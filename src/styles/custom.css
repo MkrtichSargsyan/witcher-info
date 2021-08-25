@@ -11,6 +11,7 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+
   /* overflow-y: hidden; */
 }
 
@@ -110,8 +111,8 @@ body {
 
 .sunset {
   transform: skewX(20deg);
-  background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/characters_cover.jpg') no-repeat right;
   background-position: center;
   margin-left: 40px;
@@ -121,7 +122,8 @@ body {
 
 .sunrise {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -218,14 +220,16 @@ body {
 /* rotating */
 
 .circle {
-  -webkit-animation: rotateY 1s infinite linear;
+  -webkit-animation: rotatey 1s infinite linear;
   animation: rotateY 3s infinite linear;
 }
+
 @-webkit-keyframes rotateY {
   to {
     -webkit-transform: rotateY(360deg);
   }
 }
+
 @keyframes rotateY {
   to {
     transform: rotateY(360deg);
@@ -237,12 +241,12 @@ body {
 select {
   padding: 5px;
   font-size: 25px;
-  font-family: dumbledor;
+  font-family: dumbledor, 'Times New Roman', Times, serif;
   line-height: 1;
   height: 45px;
   -webkit-appearance: none;
 }
 
-.description_shadow{
+.description_shadow {
   box-shadow: 18px -2px 30px -8px #1a1a1b;
 }

@@ -5,7 +5,7 @@ const initialState = {
   selectedOption: 'All',
 };
 
-export const optionsReducer = (state = initialState, { type, payload }) => {
+const optionsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.SHOW_OPTIONS:
       return { ...state, options: [...payload] };
@@ -15,3 +15,5 @@ export const optionsReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export default optionsReducer;

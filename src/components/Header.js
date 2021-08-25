@@ -24,7 +24,7 @@ export default function Header() {
         onChange={handleChange}
       >
         <option className="bg-gray-600 text-white" value="All">
-          {'All'}
+          All
         </option>
         {options.map((op) => (
           <option key={op} className="text-black" value={op}>

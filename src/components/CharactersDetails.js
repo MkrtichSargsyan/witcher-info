@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function CharactersDetails({ details }) {
-  const { name, fappearance, nationality, profession, race } = details;
+  const {
+    name, fappearance, nationality, profession, race,
+  } = details;
 
   return (
     <aside className="flex-1 px-10 description_shadow">
@@ -33,3 +36,7 @@ export default function CharactersDetails({ details }) {
     </aside>
   );
 }
+
+CharactersDetails.propTypes = {
+  details: PropTypes.instanceOf(Object).isRequired,
+};

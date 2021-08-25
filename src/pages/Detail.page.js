@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import BASE_URL from '../api';
@@ -12,7 +15,7 @@ export default function DetailPage({ location }) {
   const history = useHistory();
 
   const { pathname } = location;
-  const itemsType = location.state.itemsType;
+  const { itemsType } = location.state;
   const url = BASE_URL + pathname.substr(1);
 
   useEffect(() => {
@@ -70,3 +73,7 @@ export default function DetailPage({ location }) {
     </div>
   );
 }
+
+DetailPage.propTypes = {
+  location: PropTypes.string.isRequired,
+};

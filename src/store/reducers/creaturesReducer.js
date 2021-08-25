@@ -5,7 +5,7 @@ const initialState = {
   filtered: [],
 };
 
-export const creaturesReducer = (state = initialState, { type, payload }) => {
+const creaturesReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.FETCH_CREATURES:
       return { ...state, creatures: [...payload], filtered: [...payload] };
@@ -15,3 +15,5 @@ export const creaturesReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export default creaturesReducer;

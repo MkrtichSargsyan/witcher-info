@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Slider from '../components/Slider';
-import characters_background from '../images/back_w.jpg';
+import charactersBackground from '../images/back_w.jpg';
 import { selectOption } from '../store/actions';
 
 export default function CharactersPage() {
@@ -12,11 +12,11 @@ export default function CharactersPage() {
 
   return (
     <Slider
-      itemsType='characters'
+      itemsType="characters"
       slides={characters}
-      bg={characters_background}
+      bg={charactersBackground}
       title={{
-        quote: `Evil Is Evil. Lesser, Greater, Middling, Makes No Difference. If I'm To Choose Between One Evil And Another, I'd Rather Not Choose At All`,
+        quote: 'Evil Is Evil. Lesser, Greater, Middling, Makes No Difference. If I\'m To Choose Between One Evil And Another, I\'d Rather Not Choose At All',
         author: 'Geralt of Rivia',
       }}
     />

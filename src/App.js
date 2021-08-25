@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -12,8 +13,8 @@ import DetailPage from './pages/Detail.page';
 
 function App() {
   const [percent, setPercent] = useState(0);
-  const creatures_url = 'creatures';
-  const characters_url = 'characters';
+  const creaturesUrl = 'creatures';
+  const charactersUrl = 'characters';
   const [count, setCount] = useState(3.7);
 
   const dispatch = useDispatch();
@@ -23,18 +24,18 @@ function App() {
       count > 0 && setCount((count) => count - 1);
     }, 1000);
 
-    setPercent(Math.round(100 - (100 * count) / 3.7)); //counting the percentage for 5 seconds
+    setPercent(Math.round(100 - (100 * count) / 3.7)); // counting the percentage for 5 seconds
 
-    dispatch(fetchCreatures(BASE_URL + creatures_url));
-    dispatch(fetchCharacters(BASE_URL + characters_url));
+    dispatch(fetchCreatures(BASE_URL + creaturesUrl));
+    dispatch(fetchCharacters(BASE_URL + charactersUrl));
 
     return () => clearInterval(interval);
   }, [count, dispatch]);
 
   return (
     <>
-      {false ? (
-        // {percent < 100 ? (
+      {/* {false ? ( */}
+      {percent < 100 ? (
         <LoadingPage completed={percent} />
       ) : (
         <Switch>

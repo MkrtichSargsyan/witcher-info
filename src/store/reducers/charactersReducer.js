@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import * as types from '../types';
 
 const initialState = {
@@ -5,7 +6,7 @@ const initialState = {
   filtered: [],
 };
 
-export const charactersReducer = (state = initialState, { type, payload }) => {
+const charactersReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case types.FETCH_CHARACTERS:
       return { ...state, characters: [...payload], filtered: [...payload] };
@@ -15,3 +16,5 @@ export const charactersReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+export default charactersReducer;

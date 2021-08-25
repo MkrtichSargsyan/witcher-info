@@ -1,12 +1,13 @@
-export function getRandomItems(arr, n) {
-  arr = arr.filter((el) => el.profession !== 'Unknown');
-  let result = new Array(n),
-    len = arr.length,
-    taken = new Array(len);
-  if (n > len)
-    throw new RangeError('getRandom: more elements taken than available');
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
+export default function getRandomItems(arr, n) {
+  arr.filter((el) => el.profession !== 'Unknown');
+  const result = new Array(n);
+  let len = arr.length;
+  const taken = new Array(len);
+  if (n > len) throw new RangeError('getRandom: more elements taken than available');
   while (n--) {
-    let x = Math.floor(Math.random() * len);
+    const x = Math.floor(Math.random() * len);
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }

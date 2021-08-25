@@ -1,22 +1,24 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Carousel } from '3d-react-carousal';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { showOptions } from '../store/actions';
 
-export default function Slider({ slides, bg, title, itemsType }) {
+export default function Slider({
+  slides, bg, title, itemsType,
+}) {
   const selectedOption = useSelector(
-    (state) => state.optionsReducer.selectedOption
+    (state) => state.optionsReducer.selectedOption,
   );
   const dispatch = useDispatch();
-  let history = useHistory();
-  console.log(slides);
+  const history = useHistory();
   // get unique classes for the slider
-  let classes = slides
+  const classes = slides
     .map((el) => (itemsType === 'characters' ? el.profession : el.class))
     .reduce(
       (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
-      []
+      [],
     );
 
   // filter the slides
@@ -25,17 +27,15 @@ export default function Slider({ slides, bg, title, itemsType }) {
 
   switch (itemsType) {
     case 'characters':
-      filteredSlides =
-        selectedOption === 'All'
-          ? slides
-          : slides.filter((element) => element.profession === selectedOption);
+      filteredSlides = selectedOption === 'All'
+        ? slides
+        : slides.filter((element) => element.profession === selectedOption);
       break;
 
     case 'creatures':
-      filteredSlides =
-        selectedOption === 'All'
-          ? slides
-          : slides.filter((element) => element.class === selectedOption);
+      filteredSlides = selectedOption === 'All'
+        ? slides
+        : slides.filter((element) => element.class === selectedOption);
       break;
 
     default:
@@ -51,29 +51,29 @@ export default function Slider({ slides, bg, title, itemsType }) {
     history.push(path, { itemsType });
   };
 
-  const slidesArr =
-    filteredSlides.length > 0 &&
-    filteredSlides.map((el) => {
-      return (
-        <div
-          key={el.id}
-          id={el.id}
-          className="card flex flex-col items-center relative"
-          onClick={() => showDetails(el)}
-        >
-          <h2 className="text-2xl text-white mt-3 font_courgette">
-            {itemsType === 'characters' ? el.profession : el.class}
-          </h2>
-          <img
-            className="object-contain w-full h-full"
-            src={el.image}
-            alt={el.id}
-          />
-        </div>
-      );
-    });
+  const slidesArr = filteredSlides.length > 0
+    && filteredSlides.map((el) => (
+      <div
+        key={el.id}
+        id={el.id}
+        role="button"
+        tabIndex={el.id}
+        className="card flex flex-col items-center relative"
+        onClick={() => showDetails(el)}
+        onKeyDown={() => showDetails(el)}
+      >
+        <h2 className="text-2xl text-white mt-3 font_courgette">
+          {itemsType === 'characters' ? el.profession : el.class}
+        </h2>
+        <img
+          className="object-contain w-full h-full"
+          src={el.image}
+          alt={el.id}
+        />
+      </div>
+    ));
 
-  let sectionStyle = {
+  const sectionStyle = {
     backgroundImage: `url(${bg})`,
   };
 
@@ -110,14 +110,18 @@ export default function Slider({ slides, bg, title, itemsType }) {
         </>
       ) : (
         <div
-          className="w-screen p-10 mt-40 
-         flex flex-wrap justify-around 
+          className="w-screen p-10 mt-40
+         flex flex-wrap justify-around
          gap-4 overflow-y-scroll transform scale-100"
         >
           {slides.map((slide) => (
             <div
+              key={slide.id}
+              role="button"
+              tabIndex={slide.id}
               className="p-6 bg-black bg-opacity-90 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500"
               onClick={() => showDetails(slide)}
+              onKeyDown={() => showDetails(slide)}
             >
               <img
                 claclassNamess="w-64 object-cover rounded-t-md"
@@ -136,3 +140,10 @@ export default function Slider({ slides, bg, title, itemsType }) {
     </div>
   );
 }
+
+Slider.propTypes = {
+  slides: PropTypes.instanceOf(Array).isRequired,
+  bg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  itemsType: PropTypes.string.isRequired,
+};

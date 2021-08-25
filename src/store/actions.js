@@ -1,6 +1,6 @@
-import * as types from './types';
 import axios from 'axios';
-import { getRandomItems } from '../helpers';
+import * as types from './types';
+import getRandomItems from '../helpers';
 
 const fetchCreaturesSuccess = (payload) => ({
   type: types.FETCH_CREATURES,
