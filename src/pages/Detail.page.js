@@ -25,7 +25,11 @@ export default function DetailPage({ location }) {
   const { id, image } = details;
 
   return (
-    <div className="text-white px-36 py-6 overflow-hidden h-screen">
+    <div
+      className={`text-white px-36 py-6 ${
+        window.innerWidth > 1100 ? 'overflow-hidden' : 'overflow-scroll'
+      } h-screen`}
+    >
       <div className="flex justify-between items-center">
         <Link to="/">
           <img className="circle w-20 h-20 logo" src={logo} alt="logo" />
@@ -34,13 +38,35 @@ export default function DetailPage({ location }) {
           <img src={prev} alt="prev" onClick={() => history.goBack()} />
         </div>
       </div>
-      <section className="flex mt-12 h-screen">
-        <div className=" h-4/6">
-          <img className="object-contain w-full h-full" src={image} alt={id} />
-        </div>
-        {itemsType === 'creatures' && <CreaturesDetails details={details} />}
-        {itemsType === 'characters' && <CharactersDetails details={details} />}
-      </section>
+      {window.innerWidth > 1100 ? (
+        <section className="flex mt-12 h-screen">
+          <div className=" h-4/6">
+            <img
+              className="object-contain w-full h-full"
+              src={image}
+              alt={id}
+            />
+          </div>
+          {itemsType === 'creatures' && <CreaturesDetails details={details} />}
+          {itemsType === 'characters' && (
+            <CharactersDetails details={details} />
+          )}
+        </section>
+      ) : (
+        <section className="flex flex-col mt-12 h-screen overflow-y-scroll">
+          <div className=" h-4/6">
+            <img
+              className="object-contain w-full h-full"
+              src={image}
+              alt={id}
+            />
+          </div>
+          {itemsType === 'creatures' && <CreaturesDetails details={details} />}
+          {itemsType === 'characters' && (
+            <CharactersDetails details={details} />
+          )}
+        </section>
+      )}
     </div>
   );
 }
