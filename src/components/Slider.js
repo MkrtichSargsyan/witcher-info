@@ -8,6 +8,8 @@ import { showOptions } from '../store/actions';
 export default function Slider({
   slides, bg, title, itemsType,
 }) {
+  console.log('slider');
+
   const selectedOption = useSelector(
     (state) => state.optionsReducer.selectedOption,
   );
@@ -20,7 +22,6 @@ export default function Slider({
       (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
       [],
     );
-
   // filter the slides
 
   let filteredSlides = [];

@@ -5,7 +5,6 @@ export default function CreaturesDetails({ details }) {
   const {
     class: type, name, quest, susceptibility, tactics,
   } = details;
-
   return (
     <aside className="flex-1 px-10 description_shadow">
       <h1 className="text-6xl courgette mb-6">{name}</h1>

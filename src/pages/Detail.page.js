@@ -11,7 +11,7 @@ import logo from '../images/logo.png';
 import prev from '../images/prev.png';
 
 export default function DetailPage({ location }) {
-  const [details, setDetails] = useState('');
+  const [details, setDetails] = useState({});
   const history = useHistory();
 
   const { pathname } = location;
