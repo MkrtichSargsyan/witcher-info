@@ -8,8 +8,6 @@ import { showOptions } from '../store/actions';
 export default function Slider({
   slides, bg, title, itemsType,
 }) {
-  console.log('slider');
-
   const selectedOption = useSelector(
     (state) => state.optionsReducer.selectedOption,
   );

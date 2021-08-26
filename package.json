@@ -7,7 +7,6 @@
     "@oscarbarrett/react-multi-carousel": "^2.2.11-alpha.3",
     "@ramonak/react-progress-bar": "^3.2.1",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "3d-react-carousal": "^4.0.2",
     "axios": "^0.21.1",
@@ -17,6 +16,7 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0"
@@ -25,7 +25,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fix": "stylelint \"**/*.css\" --fix && eslint . --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +51,7 @@
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-syntax-jsx": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "@testing-library/react": "^12.0.0",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",

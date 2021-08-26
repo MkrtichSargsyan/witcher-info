@@ -13,7 +13,6 @@ import prev from '../images/prev.png';
 export default function DetailPage({ location }) {
   const [details, setDetails] = useState({});
   const history = useHistory();
-
   const { pathname } = location;
   const { itemsType } = location.state;
   const url = BASE_URL + pathname.substr(1);
