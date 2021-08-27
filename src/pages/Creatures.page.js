@@ -5,7 +5,6 @@ import myDreamDorest from '../images/my_dream_forest.jpg';
 import { selectOption } from '../store/actions';
 
 export default function CreaturesPage() {
-  console.log('creature page');
   const dispatch = useDispatch();
   dispatch(selectOption('All'));
 
