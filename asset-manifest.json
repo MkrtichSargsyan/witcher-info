@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/witcher-info/static/css/main.8190413f.chunk.css",
-    "main.js": "/witcher-info/static/js/main.2aa6acec.chunk.js",
-    "main.js.map": "/witcher-info/static/js/main.2aa6acec.chunk.js.map",
+    "main.js": "/witcher-info/static/js/main.90cbe584.chunk.js",
+    "main.js.map": "/witcher-info/static/js/main.90cbe584.chunk.js.map",
     "runtime-main.js": "/witcher-info/static/js/runtime-main.9fa8eacc.js",
     "runtime-main.js.map": "/witcher-info/static/js/runtime-main.9fa8eacc.js.map",
     "static/js/2.7b6dd40d.chunk.js": "/witcher-info/static/js/2.7b6dd40d.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.9fa8eacc.js",
     "static/js/2.7b6dd40d.chunk.js",
     "static/css/main.8190413f.chunk.css",
-    "static/js/main.2aa6acec.chunk.js"
+    "static/js/main.90cbe584.chunk.js"
   ]
 }
