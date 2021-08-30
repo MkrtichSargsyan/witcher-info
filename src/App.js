@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import LoadingPage from './pages/Loading.page';
 import MainPage from './pages/Main.page';
 import { fetchCreatures, fetchCharacters } from './store/actions';
-import BASE_URL from './api';
 import CharactersPage from './pages/Characters.page';
 import CreaturesPage from './pages/Creatures.page';
 import Layout from './components/Layout';
