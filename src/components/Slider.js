@@ -21,7 +21,6 @@ export default function Slider({
       [],
     );
   // filter the slides
-
   let filteredSlides = [];
 
   switch (itemsType) {
