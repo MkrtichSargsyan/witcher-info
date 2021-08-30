@@ -12,8 +12,6 @@ import DetailPage from './pages/Detail.page';
 
 function App() {
   const [percent, setPercent] = useState(0);
-  // const creaturesUrl = 'creatures';
-  // const charactersUrl = 'characters';
   const [count, setCount] = useState(3.7);
 
   const dispatch = useDispatch();
@@ -25,17 +23,16 @@ function App() {
 
     setPercent(Math.round(100 - (100 * count) / 3.7)); // counting the percentage for 5 seconds
 
-    // dispatch(fetchCreatures(BASE_URL + creaturesUrl));
-    dispatch(fetchCreatures('/.netlify/functions/getCreatures'));
-    dispatch(fetchCharacters('/.netlify/functions/getCharacters'));
-    // dispatch(fetchCharacters(BASE_URL + charactersUrl));
-
+    
+    // dispatch(fetchCreatures('/.netlify/functions/getCreatures'));
+    // dispatch(fetchCharacters('/.netlify/functions/getCharacters'));
+    dispatch(fetchCreatures('https://determined-ritchie-1e224a.netlify.app/.netlify/functions/getCreatures'));
+    dispatch(fetchCharacters('https://determined-ritchie-1e224a.netlify.app/.netlify/functions/getCharacters'));
     return () => clearInterval(interval);
   }, [count, dispatch]);
 
   return (
     <>
-      {/* {false ? ( */}
       {percent < 100 ? (
         <LoadingPage completed={percent} />
       ) : (
