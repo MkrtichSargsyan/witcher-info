@@ -17,7 +17,9 @@ export const fetchCreatures = (url) => async (dispatch) => {
 
   try {
     creatures = await axios
-      .get(url)
+      .get(url, {
+        mode: 'no-cors',
+      })
       .then((el) => el.data)
       .then((data) => getRandomItems(data, 20));
   } catch (error) {
@@ -33,7 +35,9 @@ export const fetchCharacters = (url) => async (dispatch) => {
 
   try {
     characters = await axios
-      .get(url)
+      .get(url, {
+        mode: 'no-cors',
+      })
       .then((el) => el.data)
       .then((data) => getRandomItems(data, 12));
   } catch (error) {
