@@ -1113,6 +1113,9 @@ exports.handler = async () => {
   ];
 
   return {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     statusCode: 200,
     body: JSON.stringify(creatures),
   };
