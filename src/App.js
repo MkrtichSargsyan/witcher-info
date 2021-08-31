@@ -21,10 +21,8 @@ function App() {
       count > 0 && setCount((count) => count - 1);
     }, 1000);
 
-    setPercent(Math.round(100 - (100 * count) / 3.7)); // counting the percentage for 5 seconds
+    setPercent(Math.round(100 - (100 * count) / 3.7)); // counting the percentage for 3.7 seconds
 
-    // dispatch(fetchCreatures('/.netlify/functions/getCreatures'));
-    // dispatch(fetchCharacters('/.netlify/functions/getCharacters'));
     dispatch(
       fetchCreatures(
         'https://determined-ritchie-1e224a.netlify.app/.netlify/functions/getCreatures',

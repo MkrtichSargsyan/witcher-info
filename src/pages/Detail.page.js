@@ -16,7 +16,7 @@ export default function DetailPage({ location }) {
   const { pathname } = location;
   const { itemsType } = location.state;
   const url = BASE_URL + pathname.substr(1);
-
+  console.log(location);
   useEffect(() => {
     const fetchDetails = async (url) => {
       await axios.get(url).then((arr) => setDetails(arr.data[0]));

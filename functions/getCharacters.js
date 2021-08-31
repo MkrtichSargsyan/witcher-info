@@ -4,7 +4,7 @@ const axios = require('axios');
 
 const API_ENDPOINT = 'http://witcher3api.com/api/characters';
 
-exports.handler = async () => {
+exports.handler = async (event) => {
   const characters = [
     {
       id: 1,
@@ -6137,11 +6137,17 @@ exports.handler = async () => {
     },
   ];
 
+  const subject = event.queryStringParameters.id;
+
+  console.log(subject);
+  console.log(event);
+
   return {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
     statusCode: 200,
-    body: JSON.stringify(characters),
+    // body: JSON.stringify(characters),
+    body: JSON.stringify(subject),
   };
 };
