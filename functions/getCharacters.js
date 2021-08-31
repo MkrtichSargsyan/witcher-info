@@ -6138,15 +6138,15 @@ exports.handler = async (event) => {
   ];
 
   const subject = event.queryStringParameters.id;
-
-  const filteredCharacters = characters.filter((el) => el.id === subject);
+  const filteredCharacters = subject
+    ? characters.filter((el) => `${el.id}` === subject)
+    : characters;
 
   return {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
     statusCode: 200,
-    // body: JSON.stringify(characters),
     body: JSON.stringify(filteredCharacters),
   };
 };

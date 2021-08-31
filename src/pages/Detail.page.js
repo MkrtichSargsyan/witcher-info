@@ -4,7 +4,6 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import BASE_URL from '../api';
 import CharactersDetails from '../components/CharactersDetails';
 import CreaturesDetails from '../components/CreaturesDetails';
 import logo from '../images/logo.png';
@@ -15,11 +14,16 @@ export default function DetailPage({ location }) {
   const history = useHistory();
   const { pathname } = location;
   const { itemsType } = location.state;
-  const url = BASE_URL + pathname.substr(1);
-  console.log(location);
+  const pathnameArr = pathname.split('/');
+  const itemNumber = pathnameArr[pathnameArr.length - 1];
+  const url = `https://determined-ritchie-1e224a.netlify.app/.netlify/functions/getCharacters${itemNumber}`;
   useEffect(() => {
     const fetchDetails = async (url) => {
-      await axios.get(url).then((arr) => setDetails(arr.data[0]));
+      await axios
+        .get(url, {
+          mode: 'no-cors',
+        })
+        .then((arr) => setDetails(arr.data[0]));
     };
     fetchDetails(url);
   }, [url]);
