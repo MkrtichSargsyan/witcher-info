@@ -6139,8 +6139,7 @@ exports.handler = async (event) => {
 
   const subject = event.queryStringParameters.id;
 
-  console.log(subject);
-  console.log(event);
+  const filteredCharacters = characters.filter((el) => el.id === subject);
 
   return {
     headers: {
@@ -6148,6 +6147,6 @@ exports.handler = async (event) => {
     },
     statusCode: 200,
     // body: JSON.stringify(characters),
-    body: JSON.stringify(subject),
+    body: JSON.stringify(filteredCharacters),
   };
 };
