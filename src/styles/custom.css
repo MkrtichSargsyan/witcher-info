@@ -132,6 +132,22 @@ body {
   background-size: cover;
 }
 
+.sunrise-n {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('../images/creatures_cover.jpg') left no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.sunset-n {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('../images/characters_cover.jpg') no-repeat right;
+  background-size: cover;
+  background-position: center;
+}
+
 .slider:hover {
   width: 70%;
   opacity: 1;

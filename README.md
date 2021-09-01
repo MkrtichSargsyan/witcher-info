@@ -26,11 +26,8 @@ This project is for showing the characters and creatures from the witcher game
 
 ## Live Demo
 
-<a href= "https://rawcdn.githack.com/RICKCOYL/embedding-images-and-video2/a77e9d502c03f5f9b1719a0b180b90f8b2b754f7/index.html" target="_blank">Live version</a>
+<a href= "https://determined-ritchie-1e224a.netlify.app" target="_blank">Live version</a>
 
-## Serverless functions
-
-```https://app.netlify.com/sites/determined-ritchie-1e224a/functions```
 
 ## Author
 
