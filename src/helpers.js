@@ -11,6 +11,5 @@ export default function getRandomItems(arr, n) {
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
-  console.log('reslu', result);
   return result;
 }

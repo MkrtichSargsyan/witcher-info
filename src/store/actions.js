@@ -43,7 +43,6 @@ export const fetchCharacters = (url) => async (dispatch) => {
   } catch (error) {
     throw new Error(error);
   }
-  console.log(characters);
   return dispatch(fetchCharactersSuccess(characters));
 };
 

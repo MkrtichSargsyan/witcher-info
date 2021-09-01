@@ -113,7 +113,8 @@ body {
 
 .sunset {
   transform: skewX(20deg);
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/characters_cover.jpg') no-repeat right;
   background-position: center;
   margin-left: 40px;
@@ -123,7 +124,8 @@ body {
 
 .sunrise {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
