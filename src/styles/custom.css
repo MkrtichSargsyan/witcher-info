@@ -118,7 +118,8 @@ body {
 
 .sunrise {
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -128,7 +129,8 @@ body {
 
 .sunset {
   transform: skewX(20deg);
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/characters_cover.jpg') no-repeat right;
   margin-left: 40px;
   pointer-events: auto;
@@ -144,13 +146,13 @@ body {
   background-position: center;
 }
 
-.sunrise:hover + .slider {
-  width: 65%;
-}
-
 .slider:hover {
   width: 90%;
   opacity: 1;
+}
+
+.sunrise:hover + .slider {
+  width: 65%;
 }
 
 .sunrise:hover {
