@@ -11,7 +11,7 @@ function MainPage() {
           </h1>
         </Link>
         <Link className="slider" to="/characters">
-          <div className="box sunset">
+          <div className="box2 sunset">
             <h1 className="characters_title opacity-0 absolute z-10 left-1/3 pr-4 bottom-4 text-white font-bold text-6xl font_courgette">
               Characters
             </h1>
