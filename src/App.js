@@ -12,7 +12,7 @@ import DetailPage from './pages/Detail.page';
 
 function App() {
   const [percent, setPercent] = useState(0);
-  const [count, setCount] = useState(3.7);
+  const [count, setCount] = useState(3.2);
 
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ function App() {
       count > 0 && setCount((count) => count - 1);
     }, 1000);
 
-    setPercent(Math.round(100 - (100 * count) / 3.7)); // counting the percentage for 3.7 seconds
+    setPercent(Math.round(100 - (100 * count) / 3.2)); // counting the percentage for 3.7 seconds
 
     dispatch(
       fetchCreatures(

@@ -21,7 +21,7 @@ export const fetchCreatures = (url) => async (dispatch) => {
         mode: 'no-cors',
       })
       .then((el) => el.data)
-      .then((data) => getRandomItems(data, 20));
+      .then((data) => getRandomItems(data, 12));
   } catch (error) {
     throw new Error(error);
   }
@@ -43,6 +43,7 @@ export const fetchCharacters = (url) => async (dispatch) => {
   } catch (error) {
     throw new Error(error);
   }
+  console.log(characters);
   return dispatch(fetchCharactersSuccess(characters));
 };
 

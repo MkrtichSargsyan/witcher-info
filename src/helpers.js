@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 export default function getRandomItems(arr, n) {
-  arr.filter((el) => el.profession !== 'Unknown');
+  arr = arr.filter((el) => el.profession !== 'Unknown');
   const result = new Array(n);
   let len = arr.length;
   const taken = new Array(len);
@@ -11,5 +11,6 @@ export default function getRandomItems(arr, n) {
     result[n] = arr[x in taken ? taken[x] : x];
     taken[x] = --len in taken ? taken[len] : len;
   }
+  console.log('reslu', result);
   return result;
 }
