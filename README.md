@@ -4,14 +4,14 @@ This project is for showing the characters and creatures from the witcher game
 
 ## Desktop
 
-![screenshot]()
+![scr](https://user-images.githubusercontent.com/31889642/131668283-debcb511-6938-427d-8c21-300f54cc5ff0.png)
 
 ## Setup
 
-  1. Clone this repository and access the project's directory
-  2. Run "npm install".
-  3. Run "npm run test" to run the tests.
-  4. Run "npm start" to work on the development server.
+1. Clone this repository and access the project's directory
+2. Run "npm install".
+3. Run "npm run test" to run the tests.
+4. Run "npm start" to work on the development server.
 
 ## Built With
 
@@ -27,7 +27,6 @@ This project is for showing the characters and creatures from the witcher game
 ## Live Demo
 
 <a href= "https://determined-ritchie-1e224a.netlify.app" target="_blank">Live version</a>
-
 
 ## Author
 
