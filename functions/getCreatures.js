@@ -1,4 +1,4 @@
-exports.handler = async () => {
+exports.handler = async (event) => {
   const creatures = [
     {
       id: 1,
@@ -1112,11 +1112,16 @@ exports.handler = async () => {
     },
   ];
 
+  const subject = event.queryStringParameters.id;
+  const filteredCreatures = subject
+    ? creatures.filter((el) => `${el.id}` === subject)
+    : creatures;
+
   return {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
     statusCode: 200,
-    body: JSON.stringify(creatures),
+    body: JSON.stringify(filteredCreatures),
   };
 };

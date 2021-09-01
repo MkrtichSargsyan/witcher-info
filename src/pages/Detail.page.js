@@ -16,7 +16,9 @@ export default function DetailPage({ location }) {
   const { itemsType } = location.state;
   const pathnameArr = pathname.split('/');
   const itemNumber = pathnameArr[pathnameArr.length - 1];
-  const url = `https://determined-ritchie-1e224a.netlify.app/.netlify/functions/getCharacters${itemNumber}`;
+
+  const mehtodType = itemsType === 'characters' ? 'getCharacters' : 'getCreatures';
+  const url = `https://determined-ritchie-1e224a.netlify.app/.netlify/functions/${mehtodType}?id=${itemNumber}`;
   useEffect(() => {
     const fetchDetails = async (url) => {
       await axios
