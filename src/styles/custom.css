@@ -96,71 +96,60 @@ body {
   height: 100vh;
 }
 
-.slider {
-  width: 62%;
-  overflow: hidden;
-  display: inline-block;
-  transform: skewX(-20deg);
-  transition: width 1.2s ease-in-out;
-  margin-left: -150px;
-  pointer-events: none;
-}
-
 .box {
   width: 1200px;
   height: 100vh;
 }
 
-.sunset {
-  transform: skewX(20deg);
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('../images/characters_cover.jpg') no-repeat right;
-  background-position: center;
-  margin-left: 40px;
-  pointer-events: auto;
+.box2 {
+  width: 1500px;
+}
+
+.slider {
+  width: 80%;
   overflow: hidden;
+  display: inline-block;
+  transform: skewX(-20deg);
+  transition: width 1.2s ease-in-out;
+  margin-left: -400px;
+  pointer-events: none;
 }
 
 .sunrise {
   width: 100%;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/creatures_cover.jpg') left no-repeat;
   position: absolute;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   background-size: cover;
+  background-position: center;
 }
 
-.sunrise-n {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('../images/creatures_cover.jpg') left no-repeat;
-  background-size: cover;
-  background-position: right;
-}
-
-.sunset-n {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+.sunset {
+  transform: skewX(20deg);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
     url('../images/characters_cover.jpg') no-repeat right;
+  margin-left: 40px;
+  pointer-events: auto;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
 }
 
-.slider:hover {
-  width: 70%;
-  opacity: 1;
-}
-
 .slider:hover .sunset {
-  background: url('../images/characters_cover.jpg') no-repeat right;
+  background: url('../images/characters_cover.jpg');
+  background-size: cover;
   opacity: 0.8;
   background-position: center;
 }
 
 .sunrise:hover + .slider {
-  width: 55%;
+  width: 65%;
+}
+
+.slider:hover {
+  width: 90%;
+  opacity: 1;
 }
 
 .sunrise:hover {
