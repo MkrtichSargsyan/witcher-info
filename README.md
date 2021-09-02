@@ -1,6 +1,8 @@
 # Witcher Info
 
+
 This project is for showing the characters and creatures from the witcher game
+This project is based on a catalogue of dog clothes
 
 ## Desktop
 
