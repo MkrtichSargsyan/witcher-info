@@ -2,8 +2,6 @@
 
 const axios = require('axios');
 
-const API_ENDPOINT = 'http://witcher3api.com/api/characters';
-
 exports.handler = async (event) => {
   const characters = [
     {
