@@ -1,71 +1,60 @@
-# Getting Started with Create React App
+# Witcher Info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project is for showing the characters and creatures from the witcher game
+This project is based on a catalogue of dog clothes
 
-In the project directory, you can run:
+## Desktop
 
-### `yarn start`
+![scr](https://user-images.githubusercontent.com/31889642/131668283-debcb511-6938-427d-8c21-300f54cc5ff0.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository and access the project's directory
+2. Run "npm install".
+3. Run "npm run test" to run the tests.
+4. Run "npm start" to work on the development server.
 
-### `yarn test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- JavaScript/ES6
+- Jest
+- React.js, React Hooks, React Router
+- Redux, Redux-thunk
+- Tailwind.CSS,
+- Witcher3API
+- VS Code
+- Netlify
 
-### `yarn build`
+## Live Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href= "https://determined-ritchie-1e224a.netlify.app" target="_blank">Live version</a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Author
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to reach out. I'm always happy to connect :slightly_smiling_face:
 
-### `yarn eject`
+👤 **Mkrtich Sargsyan**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/MkrtichSargsyan)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/MkrtichSargsyan)
+[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/mkrtich-sargsyan/)
+[<code><img height="26" src="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/gmail.png"></code>](mailto:mkrtichsargsyan24@gmail.com)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Contributions, issues and feature requests are welcome!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Feel free to check the <a href="https://github.com/RICKCOYL/embeded-images-and-videos/issues"> issues page</a>.
 
-## Learn More
+## Show your support
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Give a ⭐️ if you like this project!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgments
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# got-info
+- <a href="https://www.w3schools.com/" target="_blank">w3schools.com</a>
+- <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+- <a href="https://www.stackoverflow.com/" target="_blank">Stackoverflow</a>
+- <a href="https://css-tricks.com/" target="_blank">CSS-TRICKS</a>
+- <a href="https://youtube.com/" target="_blank">YouTube player page</a>
