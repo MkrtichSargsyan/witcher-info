@@ -25,7 +25,6 @@ describe('action types', () => {
     expect(types.FILTER_CHARACTERS).not.toEqual('FILTER_CHARACTERSs');
   });
 
-
   it('should have a type of SHOW_OPTIONS', () => {
     expect(types.SHOW_OPTIONS).toEqual('SHOW_OPTIONS');
   });
